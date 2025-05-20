@@ -56,9 +56,11 @@ def get_blog_post(request, pk):
     post = get_object_or_404(BlogPost, pk=pk)
     serializer = BlogPostSerializer(post)
     return Response(serializer.data)
+get_blog_post.throttle_scope = 'posts'
 
 
 @api_view(['POST'])
+@throttle_classes([ScopedRateThrottle])
 def create_blog_post(request):
     """
     Create a new blog post.
@@ -69,8 +71,10 @@ def create_blog_post(request):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+create_blog_post.throttle_scope = 'posts'
 
 @api_view(['PUT'])
+@throttle_classes([ScopedRateThrottle])
 def update_blog_post(request, pk):
     """
     Update an existing blog post.
@@ -81,6 +85,8 @@ def update_blog_post(request, pk):
         serializer.save()
         return Response(serializer.data)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+update_blog_post.throttle_scope = 'posts'
+
 
 @api_view(['DELETE'])
 def delete_blog_post(request, pk):
