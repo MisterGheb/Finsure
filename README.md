@@ -61,7 +61,7 @@ A RESTful API built with Django and Django REST Framework (DRF) that allows clie
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/MisterGheb/Finsure.git>
    cd <repo-folder>
    ```
 
@@ -111,7 +111,7 @@ git checkout main
 python manage.py runserver
 ```
 
-Visit **`http://127.0.0.1:8000/api/posts/`** in your browser to explore the browsable API.
+Visit **`http://127.0.0.1:8000/api/posts/`** 
 
 ---
 
