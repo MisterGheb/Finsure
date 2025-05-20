@@ -10,19 +10,16 @@ A RESTful API built with Django and Django REST Framework (DRF) that allows clie
 2. [Tech Stack](#tech-stack)
 3. [Prerequisites](#prerequisites)
 4. [Installation & Setup](#installation--setup)
-5. [Configuration](#configuration)
-6. [Running the Application](#running-the-application)
-7. [API Endpoints](#api-endpoints)
+5. [Running the Application](#running-the-application)
+5. [API Endpoints](#api-endpoints)
 
    * [Posts](#posts)
    * [Comments (Nested)](#comments-nested)
-8. [Filtering & Pagination](#filtering--pagination)
-9. [Like/Dislike Voting](#likedislike-voting)
-10. [Rate Throttling](#rate-throttling)
-11. [Testing](#testing)
-12. [Project Structure](#project-structure)
-13. [Contributing](#contributing)
-14. [License](#license)
+7. [Filtering & Pagination](#filtering--pagination)
+8. [Like/Dislike Voting](#likedislike-voting)
+9. [Rate Throttling](#rate-throttling)
+10. [Testing](#testing)
+11. [Project Structure](#project-structure)
 
 ---
 
@@ -98,8 +95,6 @@ A RESTful API built with Django and Django REST Framework (DRF) that allows clie
    ```bash
    python manage.py migrate
    ```
-
-
 
 ---
 
@@ -217,8 +212,3 @@ requirements.txt
 ```
 
 ---
-
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
